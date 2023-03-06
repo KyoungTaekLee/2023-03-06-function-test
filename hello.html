@@ -35,6 +35,7 @@
       struct("button", root.children[0].children[2]);
     }
 
+    console.dir(root.style);
 
     struct("div", root.children[1]);
     struct("div", root.children[1]);
@@ -54,9 +55,9 @@
       element.width = "100vw";
       element.height = "20vh";
       element.position = "fixed";
+      element.zIndex = "999";
     }
     header(root.children[0].style);
-
     // header1 
     function header1(element) {
       element.style.width = "100vw";
@@ -85,13 +86,13 @@
       element.flexDirection = "row";
       element.justifyContent = "space-around";
       element.alignItems = "center";
+      element.background = "white";
     }
     header3(root.children[0].children[2].style);
 
     // header4 작은 네모박스
     function header4(element) {
       for (let j = 0; j < 5; j++) {
-        element.children[j].style.border = "1px solid black";
         element.children[j].style.width = "13vw";
         element.children[j].style.height = "5vh";
         element.children[j].style.display = "flex";
